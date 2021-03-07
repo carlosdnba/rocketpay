@@ -9,6 +9,7 @@ defmodule RocketpayWeb.Router do
     pipe_through :api
 
     get "/:filename", WelcomeController, :index
+    post "/users", UsersController, :create
   end
 
   if Mix.env() in [:dev, :test] do
